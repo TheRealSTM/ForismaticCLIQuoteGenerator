@@ -22,6 +22,6 @@ public class QuotelyApp {
         }
         Language language = Language.getLanguage(args[0]);
         caller.callForismatic(language);
-        System.out.println("Request is valid");
+        System.out.println("Request was satisfied.");
     }
 }

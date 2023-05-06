@@ -10,7 +10,7 @@ import java.util.Map;
 @Getter
 public enum Language {
     ENGLISH("English", "en"),
-    RUSSIAN("RUSSIAN", "ru");
+    RUSSIAN("Russian", "ru");
 
     private final String languageName;
     private final String languageAbbreviation;
