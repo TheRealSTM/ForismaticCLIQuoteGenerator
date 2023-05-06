@@ -13,21 +13,21 @@ import java.net.http.HttpResponse;
 @RequiredArgsConstructor(onConstructor = @__(@Inject))
 public class QuotelyAPICaller {
 
-    private static final String FORISMATIC_API_ENDPOINT = "http://api.forismatic.com/api/1.0/";
+    private static final String FORISMATIC_API_ENDPOINT = "http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=";
 
     final HttpClient httpClient;
 
     public void callForismatic(Language language) {
         System.out.println("Calling the Forismatic API using the language: " + language);
 
-        var request = HttpRequest.newBuilder(URI.create(FORISMATIC_API_ENDPOINT))
+        var request = HttpRequest.newBuilder(URI.create(FORISMATIC_API_ENDPOINT + language.getLanguageAbbreviation()))
                 .header("accept", "application/json")
                 .GET()
                 .build();
         String jsonResponse;
         try {
             HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
-            jsonResponse = response.toString();
+            jsonResponse = response.body();
         } catch (IOException | InterruptedException e) {
             System.out.println("The API call to forismatic failed with the following error: " + e);
             return;

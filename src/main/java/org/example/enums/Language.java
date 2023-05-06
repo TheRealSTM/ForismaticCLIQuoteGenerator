@@ -9,10 +9,11 @@ import java.util.Map;
 @RequiredArgsConstructor
 @Getter
 public enum Language {
-    ENGLISH("English"),
-    RUSSIAN("RUSSIAN");
+    ENGLISH("English", "en"),
+    RUSSIAN("RUSSIAN", "ru");
 
     private final String languageName;
+    private final String languageAbbreviation;
     public static Map<String, Language> languageNameToLanguageMapping = Maps.newHashMap();
 
     static {
