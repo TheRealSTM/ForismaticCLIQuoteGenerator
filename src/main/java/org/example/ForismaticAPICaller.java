@@ -14,7 +14,7 @@ import java.net.http.HttpResponse;
 import java.util.function.Supplier;
 
 @RequiredArgsConstructor(onConstructor = @__(@Inject))
-public class QuotelyAPICaller {
+public class ForismaticAPICaller {
 
     private static final String FORISMATIC_API_ENDPOINT = "http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=";
 

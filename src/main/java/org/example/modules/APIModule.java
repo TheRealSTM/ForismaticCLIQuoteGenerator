@@ -2,14 +2,14 @@ package org.example.modules;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
-import org.example.QuotelyAPICaller;
+import org.example.ForismaticAPICaller;
 
 import java.net.http.HttpClient;
 
 public class APIModule extends AbstractModule {
     @Provides
-    static QuotelyAPICaller provideQuotelyAPICaller(HttpClient httpClient) {
-        return new QuotelyAPICaller(httpClient);
+    static ForismaticAPICaller provideQuotelyAPICaller(HttpClient httpClient) {
+        return new ForismaticAPICaller(httpClient);
     }
 
     @Provides

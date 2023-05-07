@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
         Injector injector = Guice.createInjector(new ValidatorModule(),
                                                  new APIModule());
-        QuotelyApp app = injector.getInstance(QuotelyApp.class);
+        ForismaticCLIQuoteGeneratorApp app = injector.getInstance(ForismaticCLIQuoteGeneratorApp.class);
         app.processRequest(args);
     }
 }

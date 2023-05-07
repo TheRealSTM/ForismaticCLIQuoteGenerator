@@ -8,11 +8,11 @@ import org.example.validators.Validator;
 import java.util.Arrays;
 
 @RequiredArgsConstructor(onConstructor = @__(@Inject))
-public class QuotelyApp {
+public class ForismaticCLIQuoteGeneratorApp {
 
     private final Validator validator;
 
-    private final QuotelyAPICaller caller;
+    private final ForismaticAPICaller caller;
 
     public void processRequest(String[] args) {
         System.out.println("Arguments received: " + Arrays.toString(args));
