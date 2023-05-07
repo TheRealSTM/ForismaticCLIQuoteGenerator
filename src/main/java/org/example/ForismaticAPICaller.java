@@ -13,6 +13,9 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.function.Supplier;
 
+/**
+ * This class is responsible for making calls to the Forismatic API to retrieve quotes, using the provided {@link HttpClient}.
+ */
 @RequiredArgsConstructor(onConstructor = @__(@Inject))
 public class ForismaticAPICaller {
 
@@ -20,6 +23,11 @@ public class ForismaticAPICaller {
 
     final HttpClient httpClient;
 
+    /**
+     * Calls the Forismatic API using the provided language.
+     *
+     * @param language the {@link Language} to use for the API call.
+     */
     public void callForismatic(Language language) {
         System.out.println("Calling the Forismatic API using the language: " + language);
 

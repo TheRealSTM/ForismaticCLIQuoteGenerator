@@ -6,6 +6,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.extern.jackson.Jacksonized;
 
+/**
+ * This class represents a quote and relevant metadata obtained from the forismatic.com quote API.
+ */
 @AllArgsConstructor
 @Builder
 @Data
